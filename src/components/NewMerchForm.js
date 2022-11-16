@@ -6,7 +6,7 @@ function NewMerchForm(props){
   function handleNewMerchFormSubmission(event) {
     event.preventDefault();
     props.onNewMerchCreation({
-      name: event.target.names.value,
+      name: event.target.name.value,
       description: event.target.description.value,
       quantity: event.target.quantity.value,
       id: v4()

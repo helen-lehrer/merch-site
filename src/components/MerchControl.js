@@ -1,5 +1,5 @@
 import React from "react";
-import NewMerchForm from '/NewMerchForm';
+import NewMerchForm from './NewMerchForm';
 import MerchList from './MerchList';
 
 class MerchControl extends React.Component {
@@ -27,7 +27,7 @@ class MerchControl extends React.Component {
       currentlyVisibleState = <NewMerchForm onNewMerchCreation={this.handleAddingNewMerchToList}/>
       buttonText = "Return to Merch List";
     } else {
-      currentlyVisibleState = <MerchList merchlist={this.state.mainMerchList} />
+      currentlyVisibleState = <MerchList merchList={this.state.mainMerchList} />
       buttonText = "Add Merch Item";
     }
   return (
