@@ -15,6 +15,12 @@ class MerchControl extends React.Component {
     };
   }
 
+  handleRestockMerch = (merch) => {
+    this.setState({
+      selectedMerch: merch
+    })
+  }
+
   handleEditingMerchInList = (merchToEdit) => {
     const editedMainMerchList = this.state.mainMerchList
     .filter(merch => merch.id !== this.state.selectedMerch.id)
@@ -44,8 +50,7 @@ handleBuyMerch = (merch) => {
   this.setState({
     selectedMerch: merch
   });
-  }
- 
+  } 
 
   handleAddingNewMerchToList = (newMerch) => {
     const newMainMerchList = this.state.mainMerchList.concat(newMerch);
@@ -79,7 +84,7 @@ handleBuyMerch = (merch) => {
     else if(this.state.selectedMerch != null) {
       currentlyVisibleState = <MerchDetail
       merch = {this.state.selectedMerch} onClickingDelete = {this.handleDeletingMerch}
-      onClickingEdit = {this.handleEditClick} onClickingBuy = {this.handleBuyMerch} />
+      onClickingEdit = {this.handleEditClick} onClickingBuy = {this.handleBuyMerch} onClickingRestock = {this.handleRestockMerch}/>
       buttonText = "Return To Merch List";
     }
     else if (this.state.formVisibleOnPage) {

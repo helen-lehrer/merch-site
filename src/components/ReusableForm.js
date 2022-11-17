@@ -14,7 +14,8 @@ function ReusableForm(props) {
           placeholder="Description" />
         <input
           type="number"
-          name="quantity" />
+          name="quantity"
+          min="0" />
       <button type="submit">{props.buttonText}</button>
       </form>
     </React.Fragment>
